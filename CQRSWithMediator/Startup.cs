@@ -39,6 +39,7 @@ namespace HealthcareInsurance.API
             services.AddMediatR(typeof(CreatePatientCommandHandler).Assembly);
             services.AddValidatorsFromAssembly(typeof(CreatePatientCommandValidator).Assembly);
             services.AddControllers();
+            //swaggerinfo
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "HealthcareInsurance API", Version = "v1" });
