@@ -3,17 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Programming_Examples", "Programming_Examples\Programming_Examples.csproj", "{CB67105A-56BF-4FF3-8F53-A58553DD6AD3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Programming_Examples", "Programming_Examples\Programming_Examples.csproj", "{CB67105A-56BF-4FF3-8F53-A58553DD6AD3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthcareInsurance.API", "CQRSWithMediator\HealthcareInsurance.API.csproj", "{845DF999-62D9-4F42-86A1-BFC61F52D0B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HealthcareInsurance.API", "CQRSWithMediator\HealthcareInsurance.API.csproj", "{845DF999-62D9-4F42-86A1-BFC61F52D0B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthcareInsurance.Application", "HealthcareInsurance.Application\HealthcareInsurance.Application.csproj", "{6C44E9B1-628C-4026-BE0E-833E6566774D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HealthcareInsurance.Application", "HealthcareInsurance.Application\HealthcareInsurance.Application.csproj", "{6C44E9B1-628C-4026-BE0E-833E6566774D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthcareInsurance.Domain", "HealthcareInsurance.Domain\HealthcareInsurance.Domain.csproj", "{4EBC99C1-E78E-452D-A099-ACF102F7BEA6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HealthcareInsurance.Domain", "HealthcareInsurance.Domain\HealthcareInsurance.Domain.csproj", "{4EBC99C1-E78E-452D-A099-ACF102F7BEA6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthcareInsurance.Infrastructure", "HealthcareInsurance.Infrastructure\HealthcareInsurance.Infrastructure.csproj", "{050B7DE4-2B0E-4EC4-8730-459DB0E9E8D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HealthcareInsurance.Infrastructure", "HealthcareInsurance.Infrastructure\HealthcareInsurance.Infrastructure.csproj", "{050B7DE4-2B0E-4EC4-8730-459DB0E9E8D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HealthcareInsurance.Persistence", "HealthcareInsurance.Persistence\HealthcareInsurance.Persistence.csproj", "{C0602F5C-1490-4814-ACBD-254FCB3A25AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HealthcareInsurance.Persistence", "HealthcareInsurance.Persistence\HealthcareInsurance.Persistence.csproj", "{C0602F5C-1490-4814-ACBD-254FCB3A25AA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureBlobStorageClient", "..\AzureBlobStorageClient\AzureBlobStorageClient\AzureBlobStorageClient.csproj", "{7AF36D33-A8B6-4906-8D33-809D0AD855F1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{C0602F5C-1490-4814-ACBD-254FCB3A25AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0602F5C-1490-4814-ACBD-254FCB3A25AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0602F5C-1490-4814-ACBD-254FCB3A25AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AF36D33-A8B6-4906-8D33-809D0AD855F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AF36D33-A8B6-4906-8D33-809D0AD855F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AF36D33-A8B6-4906-8D33-809D0AD855F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AF36D33-A8B6-4906-8D33-809D0AD855F1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
