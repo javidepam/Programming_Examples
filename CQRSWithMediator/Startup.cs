@@ -8,6 +8,9 @@ using HealthcareInsurance.Application.Handlers;
 using MediatR;
 using HealthcareInsurance.Application.Validators;
 using FluentValidation;
+using HealthcareInsurance.Application.Services.Implementation;
+using HealthcareInsurance.Application.Services.Interfaces;
+using HealthcareInsurance.Application.Services;
 
 namespace HealthcareInsurance.API
 {
@@ -38,7 +41,15 @@ namespace HealthcareInsurance.API
 
             services.AddMediatR(typeof(CreatePatientCommandHandler).Assembly);
             services.AddValidatorsFromAssembly(typeof(CreatePatientCommandValidator).Assembly);
+
+            // Register Singleton LoggerService
+            services.AddSingleton<LoggerService>();
+
+            // Register PatientFactory
+            services.AddScoped<IPatientFactory, PatientFactory>();
+
             services.AddControllers();
+
             //swaggerinfo
             services.AddSwaggerGen(c =>
             {
