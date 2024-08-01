@@ -1,14 +1,9 @@
 ﻿using MultipleSolutions.Interfaces;
 using MultipleSolutions.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MultipleSolutions.Implementations
 {
-    public class PersonDuplicateFinder : IDuplicateFinder<Person>
+    public class PersonDuplicateFinder : IDuplicateFinder<Person, int>
     {
         public Dictionary<Person, int> FindDuplicates(List<Person> people)
         {
@@ -17,9 +12,9 @@ namespace MultipleSolutions.Implementations
             // Count occurrences of each person
             foreach (var person in people)
             {
-                if (countDictionary.ContainsKey(person))
+                if (countDictionary.TryGetValue(person, out int value))
                 {
-                    countDictionary[person]++;
+                    countDictionary[person] = ++value;
                 }
                 else
                 {
@@ -39,22 +34,21 @@ namespace MultipleSolutions.Implementations
 
     public class PersonEqualityComparer : IEqualityComparer<Person>
     {
-        public bool Equals(Person x, Person y)
+        public bool Equals(Person? x, Person? y)
         {
             if (x == null || y == null)
                 return false;
 
-            return x.FirstName == y.FirstName && x.LastName == y.LastName;
+            return x?.FirstName == y?.FirstName && x?.LastName == y?.LastName;
         }
 
-        public int GetHashCode(Person obj)
+        public int GetHashCode(Person? obj)
         {
-            if (obj == null)
-                throw new ArgumentNullException(nameof(obj));
+            ArgumentNullException.ThrowIfNull(obj);
 
             // Combine the hash codes of FirstName and LastName
-            int hashFirstName = obj.FirstName == null ? 0 : obj.FirstName.GetHashCode();
-            int hashLastName = obj.LastName == null ? 0 : obj.LastName.GetHashCode();
+            int hashFirstName = obj?.FirstName == null ? 0 : obj.FirstName.GetHashCode();
+            int hashLastName = obj?.LastName == null ? 0 : obj.LastName.GetHashCode();
 
             return hashFirstName ^ hashLastName; // XOR to combine hash codes
         }

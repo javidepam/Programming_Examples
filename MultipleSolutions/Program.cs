@@ -13,7 +13,7 @@ internal class Program
         var serviceProvider = new ServiceCollection()
             .AddSingleton<IDataReaderFile, FileDataReader>()
             .AddSingleton<IDataParser<Person>, JsonDataParser<Person>>()
-            .AddSingleton<IDuplicateFinder<Person>, PersonDuplicateFinder>()
+            .AddSingleton<IDuplicateFinder<Person, int>, PersonDuplicateFinder>()
             .AddTransient<DuplicateIdentifier>()
             .BuildServiceProvider();
 

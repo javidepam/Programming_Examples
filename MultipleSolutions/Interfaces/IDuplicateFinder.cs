@@ -1,14 +1,7 @@
-﻿using MultipleSolutions.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace MultipleSolutions.Interfaces
+﻿namespace MultipleSolutions.Interfaces
 {
-    public interface IDuplicateFinder<T>
+    public interface IDuplicateFinder<T, U>
     {
-        Dictionary<T, int> FindDuplicates(List<T> items);
+        Dictionary<T, U> FindDuplicates(List<T> items);
     }
 }

@@ -7,7 +7,7 @@ namespace MultipleSolutions.Handlers
     public class DuplicateIdentifier(
         IDataReaderFile dataReader,
         IDataParser<Person> dataParser,
-        IDuplicateFinder<Person> duplicateFinder)
+        IDuplicateFinder<Person, int> duplicateFinder)
     {
         public void GetDuplicateItems()
         {
