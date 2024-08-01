@@ -12,17 +12,18 @@ namespace Programming_Examples
         {
             // Define the table structure
             string[] headers = ["Class Type", "", "Can inherit from others", "Can be inherited", "Can be instantiated"];
-            string[,] rows = {
-            { "normal", ":", "YES", "YES", "YES" },
-            { "abstract", ":", "YES", "YES", "NO" },
-            { "sealed", ":", "YES", "NO", "YES" },
-            { "static", ":", "NO", "NO", "NO" },
-            { "interface", ":", "NO", "YES", "NO" },
-            { "partial", ":", "YES", "YES", "YES" },
-        };
+            string[,] rows =
+                            {
+                                { "normal", ":", "YES", "YES", "YES" },
+                                { "abstract", ":", "YES", "YES", "NO" },
+                                { "sealed", ":", "YES", "NO", "YES" },
+                                { "static", ":", "NO", "NO", "NO" },
+                                { "interface", ":", "NO", "YES", "NO" },
+                                { "partial", ":", "YES", "YES", "YES" },
+                            };
 
             // Define column widths
-            int[] columnWidths = { 14, 3, 25, 18, 21 };
+            int[] columnWidths = [14, 3, 25, 18, 21];
 
             // Print the top border
             PrintLine(columnWidths);
@@ -44,7 +45,7 @@ namespace Programming_Examples
             }
         }
 
-        public static void PrintLine(int[] columnWidths)
+        private static void PrintLine(int[] columnWidths)
         {
             Console.Write("+");
             for (int i = 0; i < columnWidths.Length; i++)
@@ -55,7 +56,7 @@ namespace Programming_Examples
             Console.WriteLine();
         }
 
-        public static void PrintRow(string[] columns, int[] columnWidths)
+        private static void PrintRow(string[] columns, int[] columnWidths)
         {
             Console.Write("|");
             for (int i = 0; i < columns.Length; i++)
