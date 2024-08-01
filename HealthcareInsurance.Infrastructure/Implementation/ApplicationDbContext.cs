@@ -11,6 +11,7 @@ namespace HealthcareInsurance.Infrastructure.Implementation
 {
     public class ApplicationDbContext : DbContext, IApplicationDbContext
     {
+        private bool _disposed = false;
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
         : base(options) { }
 
