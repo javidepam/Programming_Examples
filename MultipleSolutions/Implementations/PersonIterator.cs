@@ -1,18 +1,12 @@
 ﻿using MultipleSolutions.Models;
 using System.Collections;
-using System.Collections.Generic;
 
 namespace MultipleSolutions.Implementations
 {
 
-    public class PersonIterator : IEnumerable<KeyValuePair<Person, int>>
+    public class PersonIterator(Dictionary<Person, int> dictionary) : IEnumerable<KeyValuePair<Person, int>>
     {
-        private readonly Dictionary<Person, int> _dictionary;
-
-        public PersonIterator(Dictionary<Person, int> dictionary)
-        {
-            _dictionary = dictionary;
-        }
+        private readonly Dictionary<Person, int> _dictionary = dictionary;
 
         public IEnumerator<KeyValuePair<Person, int>> GetEnumerator()
         {

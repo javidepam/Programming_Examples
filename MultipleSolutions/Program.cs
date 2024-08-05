@@ -4,7 +4,6 @@ using MultipleSolutions.Handlers;
 using MultipleSolutions.Implementations;
 using MultipleSolutions.Interfaces;
 using MultipleSolutions.Models;
-using System.Data;
 
 internal class Program
 {
