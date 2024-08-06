@@ -5,13 +5,11 @@ namespace Programming_Examples.TPL
 {
     public class TPLExample(HealthcareService healthcareService)
     {
-        private readonly HealthcareService _healthcareService = healthcareService;
-
         public async Task FetchPatientAndInsuranceDetailsAsync(int patientId)
         {
             // Create tasks for fetching patient and insurance details
-            var patientTask = Task.Run(() => _healthcareService.GetPatientById(patientId));
-            var insuranceTask = Task.Run(() => _healthcareService.GetInsuranceByPatientId(patientId));
+            var patientTask = Task.Run(() => healthcareService.GetPatientById(patientId));
+            var insuranceTask = Task.Run(() => healthcareService.GetInsuranceByPatientId(patientId));
 
             // Await both tasks to complete
             await Task.WhenAll(patientTask, insuranceTask);

@@ -6,8 +6,6 @@ namespace Programming_Examples.Threading
 {
     public class BasicThreadingExample(HealthcareService healthcareService)
     {
-        private readonly HealthcareService _healthcareService = healthcareService;
-
         public void FetchPatientAndInsuranceDetails(int patientId)
         {
             Patient? patient = null;
@@ -15,12 +13,12 @@ namespace Programming_Examples.Threading
 
             Thread? patientThread = new(() =>
             {
-                patient = _healthcareService.GetPatientById(patientId);
+                patient = healthcareService.GetPatientById(patientId);
             });
 
             Thread? insuranceThread = new(() =>
             {
-                insurance = _healthcareService.GetInsuranceByPatientId(patientId);
+                insurance = healthcareService.GetInsuranceByPatientId(patientId);
             });
 
             // Start the threads

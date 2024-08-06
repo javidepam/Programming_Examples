@@ -1,7 +1,6 @@
-﻿using MailKit.Net.Smtp;
-using MimeKit;
-using System.Net.Mail;
+﻿using MimeKit;
 using System.Net;
+using System.Net.Mail;
 
 namespace Programming_Examples.Services
 {
