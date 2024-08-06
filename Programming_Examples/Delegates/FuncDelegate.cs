@@ -1,4 +1,4 @@
-﻿namespace Programming_Examples
+﻿namespace Programming_Examples.Delegates
 {
     public static class FuncDelegate
     {

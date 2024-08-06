@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using Programming_Examples;
+using Programming_Examples.Delegates;
 
 internal class Program
 {

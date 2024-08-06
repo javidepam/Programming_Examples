@@ -9,7 +9,7 @@ namespace AzureBlobStorage
 {
     internal class PracticeSection
     {
-        public static async Task DemoMethods()
+        public static void DemoMethods()
         {
             var ann = new[]
             {

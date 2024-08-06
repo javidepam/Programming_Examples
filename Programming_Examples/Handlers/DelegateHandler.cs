@@ -1,4 +1,6 @@
-﻿namespace Programming_Examples
+﻿using Programming_Examples.Delegates;
+
+namespace Programming_Examples.Handlers
 {
     /// <summary> 
     /// Delegates
@@ -9,7 +11,7 @@
     /// <para>Event is pure publisher subscriber model</para>
     /// <para>Event is a encapsulation over delegates</para>
     /// </summary> 
-    public static class DelegateSection
+    public static class DelegateHandler
     {
         public delegate int CalculateDelegate(int i);
         public static CalculateDelegate? cd;

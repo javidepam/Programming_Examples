@@ -1,6 +1,6 @@
 ﻿using Programming_Examples.Services;
 
-namespace Programming_Examples
+namespace Programming_Examples.Delegates
 {
     public static class ActionDelegate
     {

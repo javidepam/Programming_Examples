@@ -9,7 +9,7 @@ namespace AzureBlobStorage
 {
     internal class AzureServiceBusQueue
     {
-        static QueueClient queueClient;
+        static QueueClient? queueClient;
         static readonly string queueName = "Endpoint=sb://azurebusdemo.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=N4FNULf8vsr4DIziofiJ04hL80OUZCGEK+ASbHN0n1w=";
 
         static readonly string sbQueueName = "queuedemo";

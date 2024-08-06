@@ -22,8 +22,14 @@ namespace HealthcareInsurance.Application.Handlers
 
         public async Task<Patient> Handle(GetPatientByIdQuery request, CancellationToken cancellationToken)
         {
+            if (_context == null)
+            {
+                throw new InvalidOperationException("The context is not initialized.");
+            }
+
             return await _context.Patients
-                .FirstOrDefaultAsync(p => p.PatientId == request.Id, cancellationToken);
+                                 .FirstOrDefaultAsync(p => p.PatientId == request.Id, cancellationToken);
         }
+
     }
 }
